@@ -1,33 +1,57 @@
-HELP.md
+########################################
+# Maven
+########################################
 target/
-.mvn/wrapper/maven-wrapper.jar
-!**/src/main/**/target/
-!**/src/test/**/target/
+!.mvn/wrapper/maven-wrapper.jar
+.mvn/wrapper/maven-wrapper.properties
+**/logs/
+*.log
 
-### STS ###
-.apt_generated
-.classpath
-.factorypath
-.project
-.settings
-.springBeans
-.sts4-cache
+########################################
+# IDEs
+########################################
 
-### IntelliJ IDEA ###
-.idea
-*.iws
+# IntelliJ IDEA
+.idea/
 *.iml
+*.iws
 *.ipr
+out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
-build/
-!**/src/main/**/build/
-!**/src/test/**/build/
-
-### VS Code ###
+# VS Code
 .vscode/
+
+########################################
+# Sistema operacional
+########################################
+.DS_Store
+Thumbs.db
+
+########################################
+# Arquivos de configuração sensíveis
+########################################
+
+# Spring Boot
+src/main/resources/application.properties
+src/main/resources/application-dev.properties
+src/main/resources/application-prod.properties
+src/main/resources/application-test.properties
+
+# Variáveis de ambiente
+.env
+.env.*
+
+########################################
+# Backup e caches
+########################################
+*.tmp
+*.bak
+*.old
+*.swp
+
+########################################
+# Logs específicos
+########################################
+/logs/
+log/
+logging/
