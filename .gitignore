@@ -4,8 +4,15 @@
 target/
 !.mvn/wrapper/maven-wrapper.jar
 .mvn/wrapper/maven-wrapper.properties
+
+########################################
+# Logs
+########################################
 **/logs/
 *.log
+/logs/
+log/
+logging/
 
 ########################################
 # IDEs
@@ -31,7 +38,7 @@ Thumbs.db
 # Arquivos de configuração sensíveis
 ########################################
 
-# Spring Boot
+# Spring Boot - não versionar configs sensíveis
 src/main/resources/application.properties
 src/main/resources/application-dev.properties
 src/main/resources/application-prod.properties
@@ -50,8 +57,11 @@ src/main/resources/application-test.properties
 *.swp
 
 ########################################
-# Logs específicos
+# Arquivos e pastas adicionais
 ########################################
-/logs/
-log/
-logging/
+
+# Pasta de dados
+data/
+
+# Arquivo de ajuda
+HELP.md
