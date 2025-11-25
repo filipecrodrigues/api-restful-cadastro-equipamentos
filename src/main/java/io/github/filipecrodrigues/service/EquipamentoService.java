@@ -75,7 +75,7 @@ public class EquipamentoService {
 
             //Criação do cabeçalho
             Row header = sheet.createRow(0);
-            String[] colunas = {"Numero de Serei "," Marca ", " Modelo "," Data da Entrega ", " Dias em uso "};
+            String[] colunas = {"Numero de Série     ","   Marca     ", "   Modelo   ","   Data da Entrega  ", "  Dias em uso  "};
             for (int i =0; i < colunas.length; i++){
                 header.createCell(i).setCellValue(colunas[i]);
             }

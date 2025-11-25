@@ -1,4 +1,4 @@
-package io.github.filipecrodrigues.controller.EquipamentoController;
+package io.github.filipecrodrigues.controller;
 
 import io.github.filipecrodrigues.model.entity.Equipamento;
 import io.github.filipecrodrigues.service.EquipamentoService;
@@ -24,15 +24,15 @@ public class EquipamentoController {
     }
 
     //metodo Post
-    @PostMapping ("/")
+    @PostMapping
     @Operation(summary = "Registrar um novo equipamento")
-    public ResponseEntity<Equipamento> addPeriferico(@RequestBody Equipamento periferico) {
+    public ResponseEntity<Equipamento> salvar(@RequestBody Equipamento periferico) {
         Equipamento salvo = service.salvarEquipamento(periferico);
         return ResponseEntity.status(HttpStatus.CREATED).body(salvo);
     }
 
-    //metodo GET- listar
-    @GetMapping("/")
+    //metodo GET- listar todos equipamentos
+    @GetMapping
     @Operation(summary = "Listar todos os equipamentos")
     public ResponseEntity<List<Equipamento>> listarTodos() {
         return ResponseEntity.ok(service.listarTodos());
@@ -47,11 +47,12 @@ public class EquipamentoController {
                 .orElse(ResponseEntity.notFound().build());
     }
 
-    //PUT - Atualizar
+    //PUT - Atualizar o equipamento
     @PutMapping("/{id}")
     @Operation(summary = "Atualizar informações de um equipamento")
-    public ResponseEntity<Equipamento> atualizar(@PathVariable String id, @RequestBody Equipamento periferico) {
-        return ResponseEntity.ok(service.atualizar(id, periferico));
+    public ResponseEntity<Equipamento> atualizar(@PathVariable String id, @RequestBody Equipamento equipamento) {
+        return ResponseEntity.ok(service.atualizar(id, equipamento));
+
     }
 
     //Delete - Excluir
