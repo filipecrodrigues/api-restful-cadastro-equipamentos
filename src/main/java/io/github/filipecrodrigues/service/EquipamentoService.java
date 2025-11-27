@@ -1,7 +1,7 @@
 package io.github.filipecrodrigues.service;
 
-import io.github.filipecrodrigues.model.entity.Equipamento;
-import io.github.filipecrodrigues.model.repository.EquipamentoRepository;
+import io.github.filipecrodrigues.entity.Equipamento;
+import io.github.filipecrodrigues.repository.EquipamentoRepository;
 import org.apache.poi.ss.usermodel.*;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.springframework.beans.factory.annotation.Autowired;

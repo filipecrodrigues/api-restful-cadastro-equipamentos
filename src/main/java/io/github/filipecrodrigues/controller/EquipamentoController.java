@@ -1,6 +1,6 @@
 package io.github.filipecrodrigues.controller;
 
-import io.github.filipecrodrigues.model.entity.Equipamento;
+import io.github.filipecrodrigues.entity.Equipamento;
 import io.github.filipecrodrigues.service.EquipamentoService;
 import io.swagger.v3.oas.annotations.Operation;
 import org.springframework.http.HttpHeaders;

@@ -1,4 +1,4 @@
-package io.github.filipecrodrigues.model.entity;
+package io.github.filipecrodrigues.entity;
 
 
 
